@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <h1>Home Page</h1>
+            <h1>My Website</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus ducimus quam soluta harum laborum quo maxime praesentium quaerat aut?</p>
             <Outlet></Outlet>
         </div>
