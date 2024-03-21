@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
 
 const PostDetails = () => {
     const postDetails = useLoaderData();
@@ -7,14 +7,14 @@ const PostDetails = () => {
         border: "1px solid black",
         padding: "5px",
         background: "gray",
-        color: "white",
-        "padding-left": "150px",
-        "padding-right": "150px"
+        color: "white"
     }
     const navigate = useNavigate();
     const handleBack = () =>{
         navigate(-1);
     }
+    let { postId } = useParams();
+    console.log(postId);
     return (
         <div style={style}>
             <h2>{postDetails.title}</h2>
