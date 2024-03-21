@@ -1,14 +1,18 @@
 import React from 'react';
 import Header from '../Header/Header';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigation } from 'react-router-dom';
 
 const Home = () => {
+    const navigation = useNavigation()
     return (
         <div>
             <Header></Header>
             <h1>My Website</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repellendus ducimus quam soluta harum laborum quo maxime praesentium quaerat aut?</p>
-            <Outlet></Outlet>
+            {
+                navigation.state === "loading" ? "loading...." : <Outlet></Outlet>
+            }
+            
         </div>
     );
 };
